@@ -254,1872 +254,2073 @@ form, input, div {
 }
 *{box-sizing: border-box;}
 
-.chara{
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    margin: 5px auto;
+main{
+    width: 83.3333333333vw;
+    margin: 0 auto;
 }
-.box{
-    width: calc((100% - 15px * 14)/7);
-    margin: 10px 15px;
-    font-size: 14px;
+.chara
+/*外枠*/{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 -.7291666667vw;
+    position: relative;
+}
+.list
+/*外枠(サブカラー)*/
+{
+    height: 17.1875vw;
+    width: 10.6770833333vw;
+    margin: 0 .7291666667vw 3.125vw;
+    content: "";
+    display: block;
+}
+.box
+/*キャラ枠*/{
+    height: 16.7708333333vw;
+    width: 10.2604166667vw;
     display: flex;
     flex-direction: column;
+    position: relative;
+    background-color: #fff;
 }
-.box:nth-child(7n+1){
-    margin-left: 6px;
-}
-.box:nth-child(7n){
-    margin-right: 3px;
-}
-.box img{
-    width: 100%;
-}
-.top{
+.top
+/*キャラ絵・サイド部分*/{
     display: flex;
     position: relative;
     top: 0;
     flex-direction: row;
+    height: 13.4375vw;
+}
+.box img
+/*キャラ絵*/{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .top .image{
     z-index: 2;
 }
-.bg{
+.bg
+/*背景*/{
     display: flex;
     position: absolute;
     width: 100%;
 }
-.bgc{
-    height: 165px;
-    width: 80%;
+.bgc
+/*背景色*/{
+    height: 11.71875vw;
+    width: 8.4895833333vw;
 }
-.bg .side{
-    writing-mode: vertical-lr;
-    font-size: 20px;
+.bg .side
+/*サイド・英語名*/{
+    writing-mode: vertical-rl;
+    margin-top: .4166666667vw;
+    font-size: 1.09375vw;
     display: flex;
     text-align: center;
+    font-weight: 700;
 }
-.bottom{
+.bottom
+/*下部分*/{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding-left: .78125vw;
+    margin-left: 0;
+    font-style: normal;
 }
-.name{
-    background-color: #fff;
-    width: 95%;
-    margin: 1px 0;
+.bottom::before
+/*スペース*/{
+    width: .3645833333vw;
+    height: 100%;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.name
+/*キャラ名*/{
+    align-content: center;
+    font-size: 1.0416666667vw;
+    font-weight: 700;
+}
+.cv
+/*CV*/{
+    font-size: .8854166667vw;
+    color: #505050;
+    margin-top: .204166667vw;
+    font-family: "Kiwi Maru", serif;
+    height: 1em;
+}
+.cv span{
+    margin-left: .1em;
+    margin-right: .1em;
 }
 
 /*special*/
-.special{
-    box-shadow: 3px 3px 0 3px var(--s-special);
+.special .list{
+    background-color: var(--s-special);
+}
+.special .box{
     border: 1px solid var(--m-special);
 }
-.special .bgc{
+.special .bgc, .special .bottom::before{
     background-color: var(--m-special);
 }
 .special .side{
     color: var(--m-special);
 }
 .special .bottom{
-    background-color: var(--m-special);
     border-top: 1px solid var(--s-special);
 }
 /*suzuka*/
-.suzuka{
-    box-shadow: 3px 3px 0 3px var(--s-suzuka);
+.suzuka .list{
+    background-color: var(--s-suzuka);
+}
+.suzuka .box{
     border: 1px solid var(--m-suzuka);
 }
-.suzuka .bgc{
+.suzuka .bgc, .suzuka .bottom::before{
     background-color: var(--m-suzuka);
 }
 .suzuka .side{
     color: var(--m-suzuka);
 }
 .suzuka .bottom{
-    background-color: var(--m-suzuka);
     border-top: 1px solid var(--s-suzuka);
 }
 /*teio*/
-.teio{
-    box-shadow: 3px 3px 0 3px var(--s-teio);
+.teio .list{
+    background-color: var(--s-teio);
+}
+.teio .box{
     border: 1px solid var(--m-teio);
 }
-.teio .bgc{
+.teio .bgc, .teio .bottom::before{
     background-color: var(--m-teio);
 }
 .teio .side{
     color: var(--m-teio);
 }
 .teio .bottom{
-    background-color: var(--m-teio);
     border-top: 1px solid var(--s-teio);
 }
 /*maruzen*/
-.maruzen{
-    box-shadow: 3px 3px 0 3px var(--s-maruzen);
+.maruzen .list{
+    background-color: var(--s-maruzen);
+}
+.maruzen .box{
     border: 1px solid var(--m-maruzen);
 }
-.maruzen .bgc{
+.maruzen .bgc, .maruzen .bottom::before{
     background-color: var(--m-maruzen);
 }
 .maruzen .side{
     color: var(--m-maruzen);
 }
 .maruzen .bottom{
-    background-color: var(--m-maruzen);
     border-top: 1px solid var(--s-maruzen);
 }
 /*fuji*/
-.fuji{
-    box-shadow: 3px 3px 0 3px var(--s-fuji);
+.fuji .list{
+    background-color: var(--s-fuji);
+}
+.fuji .box{
     border: 1px solid var(--m-fuji);
 }
-.fuji .bgc{
+.fuji .bgc, .fuji .bottom::before{
     background-color: var(--m-fuji);
 }
 .fuji .side{
     color: var(--m-fuji);
 }
 .fuji .bottom{
-    background-color: var(--m-fuji);
     border-top: 1px solid var(--s-fuji);
 }
 /*oguri*/
-.oguri{
-    box-shadow: 3px 3px 0 3px var(--s-oguri);
+.oguri .list{
+    background-color: var(--s-oguri);
+}
+.oguri .box{
     border: 1px solid var(--m-oguri);
 }
-.oguri .bgc{
+.oguri .bgc, .oguri .bottom::before{
     background-color: var(--m-oguri);
 }
 .oguri .side{
     color: var(--m-oguri);
 }
 .oguri .bottom{
-    background-color: var(--m-oguri);
     border-top: 1px solid var(--s-oguri);
 }
 /*gold*/
-.gold{
-    box-shadow: 3px 3px 0 3px var(--s-gold);
+.gold .list{
+    background-color: var(--s-gold);
+}
+.gold .box{
     border: 1px solid var(--m-gold);
 }
-.gold .bgc{
+.gold .bgc, .gold .bottom::before{
     background-color: var(--m-gold);
 }
 .gold .side{
     color: var(--m-gold);
 }
 .gold .bottom{
-    background-color: var(--m-gold);
     border-top: 1px solid var(--s-gold);
 }
 /*vodka*/
-.vodka{
-    box-shadow: 3px 3px 0 3px var(--s-vodka);
+.vodka .list{
+    background-color: var(--s-vodka);
+}
+.vodka .box{
     border: 1px solid var(--m-vodka);
 }
-.vodka .bgc{
+.vodka .bgc, .vodka .bottom::before{
     background-color: var(--m-vodka);
 }
 .vodka .side{
     color: var(--m-vodka);
 }
 .vodka .bottom{
-    background-color: var(--m-vodka);
     border-top: 1px solid var(--s-vodka);
 }
 /*dasuka*/
-.dasuka{
-    box-shadow: 3px 3px 0 3px var(--s-dasuka);
+.dasuka .list{
+    background-color: var(--s-dasuka);
+}
+.dasuka .box{
     border: 1px solid var(--m-dasuka);
 }
-.dasuka .bgc{
+.dasuka .bgc, .dasuka .bottom::before{
     background-color: var(--m-dasuka);
 }
 .dasuka .side{
     color: var(--m-dasuka);
 }
 .dasuka .bottom{
-    background-color: var(--m-dasuka);
     border-top: 1px solid var(--s-dasuka);
 }
 /*taiki*/
-.taiki{
-    box-shadow: 3px 3px 0 3px var(--s-taiki);
+.taiki .list{
+    background-color: var(--s-taiki);
+}
+.taiki .box{
     border: 1px solid var(--m-taiki);
 }
-.taiki .bgc{
+.taiki .bgc, .taiki .bottom::before{
     background-color: var(--m-taiki);
 }
 .taiki .side{
     color: var(--m-taiki);
 }
 .taiki .bottom{
-    background-color: var(--m-taiki);
     border-top: 1px solid var(--s-taiki);
 }
 /*grass*/
-.grass{
-    box-shadow: 3px 3px 0 3px var(--s-grass);
+.grass .list{
+    background-color: var(--s-grass);
+}
+.grass .box{
     border: 1px solid var(--m-grass);
 }
-.grass .bgc{
+.grass .bgc, .grass .bottom::before{
     background-color: var(--m-grass);
 }
 .grass .side{
     color: var(--m-grass);
 }
 .grass .bottom{
-    background-color: var(--m-grass);
     border-top: 1px solid var(--s-grass);
 }
 /*amazon*/
-.amazon{
-    box-shadow: 3px 3px 0 3px var(--s-amazon);
+.amazon .list{
+    background-color: var(--s-amazon);
+}
+.amazon .box{
     border: 1px solid var(--m-amazon);
 }
-.amazon .bgc{
+.amazon .bgc, .amazon .bottom::before{
     background-color: var(--m-amazon);
 }
 .amazon .side{
     color: var(--m-amazon);
 }
 .amazon .bottom{
-    background-color: var(--m-amazon);
     border-top: 1px solid var(--s-amazon);
 }
 /*mcqueen*/
-.mcqueen{
-    box-shadow: 3px 3px 0 3px var(--s-mcqueen);
+.mcqueen .list{
+    background-color: var(--s-mcqueen);
+}
+.mcqueen .box{
     border: 1px solid var(--m-mcqueen);
 }
-.mcqueen .bgc{
+.mcqueen .bgc, .mcqueen .bottom::before{
     background-color: var(--m-mcqueen);
 }
 .mcqueen .side{
     color: var(--m-mcqueen);
 }
 .mcqueen .bottom{
-    background-color: var(--m-mcqueen);
     border-top: 1px solid var(--s-mcqueen);
 }
 /*el*/
-.el{
-    box-shadow: 3px 3px 0 3px var(--s-el);
+.el .list{
+    background-color: var(--s-el);
+}
+.el .box{
     border: 1px solid var(--m-el);
 }
-.el .bgc{
+.el .bgc, .el .bottom::before{
     background-color: var(--m-el);
 }
 .el .side{
     color: var(--m-el);
 }
 .el .bottom{
-    background-color: var(--m-el);
     border-top: 1px solid var(--s-el);
 }
 /*opera*/
-.opera{
-    box-shadow: 3px 3px 0 3px var(--s-opera);
+.opera .list{
+    background-color: var(--s-opera);
+}
+.opera .box{
     border: 1px solid var(--m-opera);
 }
-.opera .bgc{
+.opera .bgc, .opera .bottom::before{
     background-color: var(--m-opera);
 }
 .opera .side{
     color: var(--m-opera);
 }
 .opera .bottom{
-    background-color: var(--m-opera);
     border-top: 1px solid var(--s-opera);
 }
 /*brian*/
-.brian{
-    box-shadow: 3px 3px 0 3px var(--s-brian);
+.brian .list{
+    background-color: var(--s-brian);
+}
+.brian .box{
     border: 1px solid var(--m-brian);
 }
-.brian .bgc{
+.brian .bgc, .brian .bottom::before{
     background-color: var(--m-brian);
 }
 .brian .side{
     color: var(--m-brian);
 }
 .brian .bottom{
-    background-color: var(--m-brian);
     border-top: 1px solid var(--s-brian);
 }
 /*rudolf*/
-.rudolf{
-    box-shadow: 3px 3px 0 3px var(--s-rudolf);
+.rudolf .list{
+    background-color: var(--s-rudolf);
+}
+.rudolf .box{
     border: 1px solid var(--m-rudolf);
 }
-.rudolf .bgc{
+.rudolf .bgc, .rudolf .bottom::before{
     background-color: var(--m-rudolf);
 }
 .rudolf .side{
     color: var(--m-rudolf);
 }
 .rudolf .bottom{
-    background-color: var(--m-rudolf);
     border-top: 1px solid var(--s-rudolf);
 }
 /*groove*/
-.groove{
-    box-shadow: 3px 3px 0 3px var(--s-groove);
+.groove .list{
+    background-color: var(--s-groove);
+}
+.groove .box{
     border: 1px solid var(--m-groove);
 }
-.groove .bgc{
+.groove .bgc, .groove .bottom::before{
     background-color: var(--m-groove);
 }
 .groove .side{
     color: var(--m-groove);
 }
 .groove .bottom{
-    background-color: var(--m-groove);
     border-top: 1px solid var(--s-groove);
 }
 /*digital*/
-.digital{
-    box-shadow: 3px 3px 0 3px var(--s-digital);
+.digital .list{
+    background-color: var(--s-digital);
+}
+.digital .box{
     border: 1px solid var(--m-digital);
 }
-.digital .bgc{
+.digital .bgc, .digital .bottom::before{
     background-color: var(--m-digital);
 }
 .digital .side{
     color: var(--m-digital);
 }
 .digital .bottom{
-    background-color: var(--m-digital);
     border-top: 1px solid var(--s-digital);
 }
 /*sky*/
-.sky{
-    box-shadow: 3px 3px 0 3px var(--s-sky);
+.sky .list{
+    background-color: var(--s-sky);
+}
+.sky .box{
     border: 1px solid var(--m-sky);
 }
-.sky .bgc{
+.sky .bgc, .sky .bottom::before{
     background-color: var(--m-sky);
 }
 .sky .side{
     color: var(--m-sky);
 }
 .sky .bottom{
-    background-color: var(--m-sky);
     border-top: 1px solid var(--s-sky);
 }
 /*tama*/
-.tama{
-    box-shadow: 3px 3px 0 3px var(--s-tama);
+.tama .list{
+    background-color: var(--s-tama);
+}
+.tama .box{
     border: 1px solid var(--m-tama);
 }
-.tama .bgc{
+.tama .bgc, .tama .bottom::before{
     background-color: var(--m-tama);
 }
 .tama .side{
     color: var(--m-tama);
 }
 .tama .bottom{
-    background-color: var(--m-tama);
     border-top: 1px solid var(--s-tama);
 }
 /*fine*/
-.fine{
-    box-shadow: 3px 3px 0 3px var(--s-fine);
+.fine .list{
+    background-color: var(--s-fine);
+}
+.fine .box{
     border: 1px solid var(--m-fine);
 }
-.fine .bgc{
+.fine .bgc, .fine .bottom::before{
     background-color: var(--m-fine);
 }
 .fine .side{
     color: var(--m-fine);
 }
 .fine .bottom{
-    background-color: var(--m-fine);
     border-top: 1px solid var(--s-fine);
 }
 /*biwa*/
-.biwa{
-    box-shadow: 3px 3px 0 3px var(--s-biwa);
+.biwa .list{
+    background-color: var(--s-biwa);
+}
+.biwa .box{
     border: 1px solid var(--m-biwa);
 }
-.biwa .bgc{
+.biwa .bgc, .biwa .bottom::before{
     background-color: var(--m-biwa);
 }
 .biwa .side{
     color: var(--m-biwa);
 }
 .biwa .bottom{
-    background-color: var(--m-biwa);
     border-top: 1px solid var(--s-biwa);
 }
 /*mayano*/
-.mayano{
-    box-shadow: 3px 3px 0 3px var(--s-mayano);
+.mayano .list{
+    background-color: var(--s-mayano);
+}
+.mayano .box{
     border: 1px solid var(--m-mayano);
 }
-.mayano .bgc{
+.mayano .bgc, .mayano .bottom::before{
     background-color: var(--m-mayano);
 }
 .mayano .side{
     color: var(--m-mayano);
 }
 .mayano .bottom{
-    background-color: var(--m-mayano);
     border-top: 1px solid var(--s-mayano);
 }
 /*cafe*/
-.cafe{
-    box-shadow: 3px 3px 0 3px var(--s-cafe);
+.cafe .list{
+    background-color: var(--s-cafe);
+}
+.cafe .box{
     border: 1px solid var(--m-cafe);
 }
-.cafe .bgc{
+.cafe .bgc, .cafe .bottom::before{
     background-color: var(--m-cafe);
 }
 .cafe .side{
     color: var(--m-cafe);
 }
 .cafe .bottom{
-    background-color: var(--m-cafe);
     border-top: 1px solid var(--s-cafe);
 }
 /*bourbon*/
-.bourbon{
-    box-shadow: 3px 3px 0 3px var(--s-bourbon);
+.bourbon .list{
+    background-color: var(--s-bourbon);
+}
+.bourbon .box{
     border: 1px solid var(--m-bourbon);
 }
-.bourbon .bgc{
+.bourbon .bgc, .bourbon .bottom::before{
     background-color: var(--m-bourbon);
 }
 .bourbon .side{
     color: var(--m-bourbon);
 }
 .bourbon .bottom{
-    background-color: var(--m-bourbon);
     border-top: 1px solid var(--s-bourbon);
 }
 /*ryan*/
-.ryan{
-    box-shadow: 3px 3px 0 3px var(--s-ryan);
+.ryan .list{
+    background-color: var(--s-ryan);
+}
+.ryan .box{
     border: 1px solid var(--m-ryan);
 }
-.ryan .bgc{
+.ryan .bgc, .ryan .bottom::before{
     background-color: var(--m-ryan);
 }
 .ryan .side{
     color: var(--m-ryan);
 }
 .ryan .bottom{
-    background-color: var(--m-ryan);
     border-top: 1px solid var(--s-ryan);
 }
 /*bono*/
-.bono{
-    box-shadow: 3px 3px 0 3px var(--s-bono);
+.bono .list{
+    background-color: var(--s-bono);
+}
+.bono .box{
     border: 1px solid var(--m-bono);
 }
-.bono .bgc{
+.bono .bgc, .bono .bottom::before{
     background-color: var(--m-bono);
 }
 .bono .side{
     color: var(--m-bono);
 }
 .bono .bottom{
-    background-color: var(--m-bono);
     border-top: 1px solid var(--s-bono);
 }
 /*yukino*/
-.yukino{
-    box-shadow: 3px 3px 0 3px var(--s-yukino);
+.yukino .list{
+    background-color: var(--s-yukino);
+}
+.yukino .box{
     border: 1px solid var(--m-yukino);
 }
-.yukino .bgc{
+.yukino .bgc, .yukino .bottom::before{
     background-color: var(--m-yukino);
 }
 .yukino .side{
     color: var(--m-yukino);
 }
 .yukino .bottom{
-    background-color: var(--m-yukino);
     border-top: 1px solid var(--s-yukino);
 }
 /*rice*/
-.rice{
-    box-shadow: 3px 3px 0 3px var(--s-rice);
+.rice .list{
+    background-color: var(--s-rice);
+}
+.rice .box{
     border: 1px solid var(--m-rice);
 }
-.rice .bgc{
+.rice .bgc, .rice .bottom::before{
     background-color: var(--m-rice);
 }
 .rice .side{
     color: var(--m-rice);
 }
 .rice .bottom{
-    background-color: var(--m-rice);
     border-top: 1px solid var(--s-rice);
 }
 /*ines*/
-.ines{
-    box-shadow: 3px 3px 0 3px var(--s-ines);
+.ines .list{
+    background-color: var(--s-ines);
+}
+.ines .box{
     border: 1px solid var(--m-ines);
 }
-.ines .bgc{
+.ines .bgc, .ines .bottom::before{
     background-color: var(--m-ines);
 }
 .ines .side{
     color: var(--m-ines);
 }
 .ines .bottom{
-    background-color: var(--m-ines);
     border-top: 1px solid var(--s-ines);
 }
 /*tachyon*/
-.tachyon{
-    box-shadow: 3px 3px 0 3px var(--s-tachyon);
+.tachyon .list{
+    background-color: var(--s-tachyon);
+}
+.tachyon .box{
     border: 1px solid var(--m-tachyon);
 }
-.tachyon .bgc{
+.tachyon .bgc, .tachyon .bottom::before{
     background-color: var(--m-tachyon);
 }
 .tachyon .side{
     color: var(--m-tachyon);
 }
 .tachyon .bottom{
-    background-color: var(--m-tachyon);
     border-top: 1px solid var(--s-tachyon);
 }
 /*vega*/
-.vega{
-    box-shadow: 3px 3px 0 3px var(--s-vega);
+.vega .list{
+    background-color: var(--s-vega);
+}
+.vega .box{
     border: 1px solid var(--m-vega);
 }
-.vega .bgc{
+.vega .bgc, .vega .bottom::before{
     background-color: var(--m-vega);
 }
 .vega .side{
     color: var(--m-vega);
 }
 .vega .bottom{
-    background-color: var(--m-vega);
     border-top: 1px solid var(--s-vega);
 }
 /*inari*/
-.inari{
-    box-shadow: 3px 3px 0 3px var(--s-inari);
+.inari .list{
+    background-color: var(--s-inari);
+}
+.inari .box{
     border: 1px solid var(--m-inari);
 }
-.inari .bgc{
+.inari .bgc, .inari .bottom::before{
     background-color: var(--m-inari);
 }
 .inari .side{
     color: var(--m-inari);
 }
 .inari .bottom{
-    background-color: var(--m-inari);
     border-top: 1px solid var(--s-inari);
 }
 /*ticket*/
-.ticket{
-    box-shadow: 3px 3px 0 3px var(--s-ticket);
+.ticket .list{
+    background-color: var(--s-ticket);
+}
+.ticket .box{
     border: 1px solid var(--m-ticket);
 }
-.ticket .bgc{
+.ticket .bgc, .ticket .bottom::before{
     background-color: var(--m-ticket);
 }
 .ticket .side{
     color: var(--m-ticket);
 }
 .ticket .bottom{
-    background-color: var(--m-ticket);
     border-top: 1px solid var(--s-ticket);
 }
 /*syaka*/
-.syaka{
-    box-shadow: 3px 3px 0 3px var(--s-syaka);
+.syaka .list{
+    background-color: var(--s-syaka);
+}
+.syaka .box{
     border: 1px solid var(--m-syaka);
 }
-.syaka .bgc{
+.syaka .bgc, .syaka .bottom::before{
     background-color: var(--m-syaka);
 }
 .syaka .side{
     color: var(--m-syaka);
 }
 .syaka .bottom{
-    background-color: var(--m-syaka);
     border-top: 1px solid var(--s-syaka);
 }
 /*flash*/
-.flash{
-    box-shadow: 3px 3px 0 3px var(--s-flash);
+.flash .list{
+    background-color: var(--s-flash);
+}
+.flash .box{
     border: 1px solid var(--m-flash);
 }
-.flash .bgc{
+.flash .bgc, .flash .bottom::before{
     background-color: var(--m-flash);
 }
 .flash .side{
     color: var(--m-flash);
 }
 .flash .bottom{
-    background-color: var(--m-flash);
     border-top: 1px solid var(--s-flash);
 }
 /*karen*/
-.karen{
-    box-shadow: 3px 3px 0 3px var(--s-karen);
+.karen .list{
+    background-color: var(--s-karen);
+}
+.karen .box{
     border: 1px solid var(--m-karen);
 }
-.karen .bgc{
+.karen .bgc, .karen .bottom::before{
     background-color: var(--m-karen);
 }
 .karen .side{
     color: var(--m-karen);
 }
 .karen .bottom{
-    background-color: var(--m-karen);
     border-top: 1px solid var(--s-karen);
 }
 /*princess*/
-.princess{
-    box-shadow: 3px 3px 0 3px var(--s-princess);
+.princess .list{
+    background-color: var(--s-princess);
+}
+.princess .box{
     border: 1px solid var(--m-princess);
 }
-.princess .bgc{
+.princess .bgc, .princess .bottom::before{
     background-color: var(--m-princess);
 }
 .princess .side{
     color: var(--m-princess);
 }
 .princess .bottom{
-    background-color: var(--m-princess);
     border-top: 1px solid var(--s-princess);
 }
 /*city*/
-.city{
-    box-shadow: 3px 3px 0 3px var(--s-city);
+.city .list{
+    background-color: var(--s-city);
+}
+.city .box{
     border: 1px solid var(--m-city);
 }
-.city .bgc{
+.city .bgc, .city .bottom::before{
     background-color: var(--m-city);
 }
 .city .side{
     color: var(--m-city);
 }
 .city .bottom{
-    background-color: var(--m-city);
     border-top: 1px solid var(--s-city);
 }
 /*baku*/
-.baku{
-    box-shadow: 3px 3px 0 3px var(--s-baku);
+.baku .list{
+    background-color: var(--s-baku);
+}
+.baku .box{
     border: 1px solid var(--m-baku);
 }
-.baku .bgc{
+.baku .bgc, .baku .bottom::before{
     background-color: var(--m-baku);
 }
 .baku .side{
     color: var(--m-baku);
 }
 .baku .bottom{
-    background-color: var(--m-baku);
     border-top: 1px solid var(--s-baku);
 }
 /*pearl*/
-.pearl{
-    box-shadow: 3px 3px 0 3px var(--s-pearl);
+.pearl .list{
+    background-color: var(--s-pearl);
+}
+.pearl .box{
     border: 1px solid var(--m-pearl);
 }
-.pearl .bgc{
+.pearl .bgc, .pearl .bottom::before{
     background-color: var(--m-pearl);
 }
 .pearl .side{
     color: var(--m-pearl);
 }
 .pearl .bottom{
-    background-color: var(--m-pearl);
     border-top: 1px solid var(--s-pearl);
 }
 /*windy*/
-.windy{
-    box-shadow: 3px 3px 0 3px var(--s-windy);
+.windy .list{
+    background-color: var(--s-windy);
+}
+.windy .box{
     border: 1px solid var(--m-windy);
 }
-.windy .bgc{
+.windy .bgc, .windy .bottom::before{
     background-color: var(--m-windy);
 }
 .windy .side{
     color: var(--m-windy);
 }
 .windy .bottom{
-    background-color: var(--m-windy);
     border-top: 1px solid var(--s-windy);
 }
 /*sweep*/
-.sweep{
-    box-shadow: 3px 3px 0 3px var(--s-sweep);
+.sweep .list{
+    background-color: var(--s-sweep);
+}
+.sweep .box{
     border: 1px solid var(--m-sweep);
 }
-.sweep .bgc{
+.sweep .bgc, .sweep .bottom::before{
     background-color: var(--m-sweep);
 }
 .sweep .side{
     color: var(--m-sweep);
 }
 .sweep .bottom{
-    background-color: var(--m-sweep);
     border-top: 1px solid var(--s-sweep);
 }
 /*creek*/
-.creek{
-    box-shadow: 3px 3px 0 3px var(--s-creek);
+.creek .list{
+    background-color: var(--s-creek);
+}
+.creek .box{
     border: 1px solid var(--m-creek);
 }
-.creek .bgc{
+.creek .bgc, .creek .bottom::before{
     background-color: var(--m-creek);
 }
 .creek .side{
     color: var(--m-creek);
 }
 .creek .bottom{
-    background-color: var(--m-creek);
     border-top: 1px solid var(--s-creek);
 }
 /*falcon*/
-.falcon{
-    box-shadow: 3px 3px 0 3px var(--s-falcon);
+.falcon .list{
+    background-color: var(--s-falcon);
+}
+.falcon .box{
     border: 1px solid var(--m-falcon);
 }
-.falcon .bgc{
+.falcon .bgc, .falcon .bottom::before{
     background-color: var(--m-falcon);
 }
 .falcon .side{
     color: var(--m-falcon);
 }
 .falcon .bottom{
-    background-color: var(--m-falcon);
     border-top: 1px solid var(--s-falcon);
 }
 /*robroy*/
-.robroy{
-    box-shadow: 3px 3px 0 3px var(--s-robroy);
+.robroy .list{
+    background-color: var(--s-robroy);
+}
+.robroy .box{
     border: 1px solid var(--m-robroy);
 }
-.robroy .bgc{
+.robroy .bgc, .robroy .bottom::before{
     background-color: var(--m-robroy);
 }
 .robroy .side{
     color: var(--m-robroy);
 }
 .robroy .bottom{
-    background-color: var(--m-robroy);
     border-top: 1px solid var(--s-robroy);
 }
 /*jordan*/
-.jordan{
-    box-shadow: 3px 3px 0 3px var(--s-jordan);
+.jordan .list{
+    background-color: var(--s-jordan);
+}
+.jordan .box{
     border: 1px solid var(--m-jordan);
 }
-.jordan .bgc{
+.jordan .bgc, .jordan .bottom::before{
     background-color: var(--m-jordan);
 }
 .jordan .side{
     color: var(--m-jordan);
 }
 .jordan .bottom{
-    background-color: var(--m-jordan);
     border-top: 1px solid var(--s-jordan);
 }
 /*festa*/
-.festa{
-    box-shadow: 3px 3px 0 3px var(--s-festa);
+.festa .list{
+    background-color: var(--s-festa);
+}
+.festa .box{
     border: 1px solid var(--m-festa);
 }
-.festa .bgc{
+.festa .bgc, .festa .bottom::before{
     background-color: var(--m-festa);
 }
 .festa .side{
     color: var(--m-festa);
 }
 .festa .bottom{
-    background-color: var(--m-festa);
     border-top: 1px solid var(--s-festa);
 }
 /*taisin*/
-.taisin{
-    box-shadow: 3px 3px 0 3px var(--s-taisin);
+.taisin .list{
+    background-color: var(--s-taisin);
+}
+.taisin .box{
     border: 1px solid var(--m-taisin);
 }
-.taisin .bgc{
+.taisin .bgc, .taisin .bottom::before{
     background-color: var(--m-taisin);
 }
 .taisin .side{
     color: var(--m-taisin);
 }
 .taisin .bottom{
-    background-color: var(--m-taisin);
     border-top: 1px solid var(--s-taisin);
 }
 /*flower*/
-.flower{
-    box-shadow: 3px 3px 0 3px var(--s-flower);
+.flower .list{
+    background-color: var(--s-flower);
+}
+.flower .box{
     border: 1px solid var(--m-flower);
 }
-.flower .bgc{
+.flower .bgc, .flower .bottom::before{
     background-color: var(--m-flower);
 }
 .flower .side{
     color: var(--m-flower);
 }
 .flower .bottom{
-    background-color: var(--m-flower);
     border-top: 1px solid var(--s-flower);
 }
 /*urara*/
-.urara{
-    box-shadow: 3px 3px 0 3px var(--s-urara);
+.urara .list{
+    background-color: var(--s-urara);
+}
+.urara .box{
     border: 1px solid var(--m-urara);
 }
-.urara .bgc{
+.urara .bgc, .urara .bottom::before{
     background-color: var(--m-urara);
 }
 .urara .side{
     color: var(--m-urara);
 }
 .urara .bottom{
-    background-color: var(--m-urara);
     border-top: 1px solid var(--s-urara);
 }
 /*bamboo*/
-.bamboo{
-    box-shadow: 3px 3px 0 3px var(--s-bamboo);
+.bamboo .list{
+    background-color: var(--s-bamboo);
+}
+.bamboo .box{
     border: 1px solid var(--m-bamboo);
 }
-.bamboo .bgc{
+.bamboo .bgc, .bamboo .bottom::before{
     background-color: var(--m-bamboo);
 }
 .bamboo .side{
     color: var(--m-bamboo);
 }
 .bamboo .bottom{
-    background-color: var(--m-bamboo);
     border-top: 1px solid var(--s-bamboo);
 }
 /*biko*/
-.biko{
-    box-shadow: 3px 3px 0 3px var(--s-biko);
+.biko .list{
+    background-color: var(--s-biko);
+}
+.biko .box{
     border: 1px solid var(--m-biko);
 }
-.biko .bgc{
+.biko .bgc, .biko .bottom::before{
     background-color: var(--m-biko);
 }
 .biko .side{
     color: var(--m-biko);
 }
 .biko .bottom{
-    background-color: var(--m-biko);
     border-top: 1px solid var(--s-biko);
 }
 /*sunday*/
-.sunday{
-    box-shadow: 3px 3px 0 3px var(--s-sunday);
+.sunday .list{
+    background-color: var(--s-sunday);
+}
+.sunday .box{
     border: 1px solid var(--m-sunday);
 }
-.sunday .bgc{
+.sunday .bgc, .sunday .bottom::before{
     background-color: var(--m-sunday);
 }
 .sunday .side{
     color: var(--m-sunday);
 }
 .sunday .bottom{
-    background-color: var(--m-sunday);
     border-top: 1px solid var(--s-sunday);
 }
 /*fuku*/
-.fuku{
-    box-shadow: 3px 3px 0 3px var(--s-fuku);
+.fuku .list{
+    background-color: var(--s-fuku);
+}
+.fuku .box{
     border: 1px solid var(--m-fuku);
 }
-.fuku .bgc{
+.fuku .bgc, .fuku .bottom::before{
     background-color: var(--m-fuku);
 }
 .fuku .side{
     color: var(--m-fuku);
 }
 .fuku .bottom{
-    background-color: var(--m-fuku);
     border-top: 1px solid var(--s-fuku);
 }
 /*mrcb*/
-.mrcb{
-    box-shadow: 3px 3px 0 3px var(--s-mrcb);
+.mrcb .list{
+    background-color: var(--s-mrcb);
+}
+.mrcb .box{
     border: 1px solid var(--m-mrcb);
 }
-.mrcb .bgc{
+.mrcb .bgc, .mrcb .bottom::before{
     background-color: var(--m-mrcb);
 }
 .mrcb .side{
     color: var(--m-mrcb);
 }
 .mrcb .bottom{
-    background-color: var(--m-mrcb);
     border-top: 1px solid var(--s-mrcb);
 }
 /*doto*/
-.doto{
-    box-shadow: 3px 3px 0 3px var(--s-doto);
+.doto .list{
+    background-color: var(--s-doto);
+}
+.doto .box{
     border: 1px solid var(--m-doto);
 }
-.doto .bgc{
+.doto .bgc, .doto .bottom::before{
     background-color: var(--m-doto);
 }
 .doto .side{
     color: var(--m-doto);
 }
 .doto .bottom{
-    background-color: var(--m-doto);
     border-top: 1px solid var(--s-doto);
 }
 /*dober*/
-.dober{
-    box-shadow: 3px 3px 0 3px var(--s-dober);
+.dober .list{
+    background-color: var(--s-dober);
+}
+.dober .box{
     border: 1px solid var(--m-dober);
 }
-.dober .bgc{
+.dober .bgc, .dober .bottom::before{
     background-color: var(--m-dober);
 }
 .dober .side{
     color: var(--m-dober);
 }
 .dober .bottom{
-    background-color: var(--m-dober);
     border-top: 1px solid var(--s-dober);
 }
 /*nature*/
-.nature{
-    box-shadow: 3px 3px 0 3px var(--s-nature);
+.nature .list{
+    background-color: var(--s-nature);
+}
+.nature .box{
     border: 1px solid var(--m-nature);
 }
-.nature .bgc{
+.nature .bgc, .nature .bottom::before{
     background-color: var(--m-nature);
 }
 .nature .side{
     color: var(--m-nature);
 }
 .nature .bottom{
-    background-color: var(--m-nature);
     border-top: 1px solid var(--s-nature);
 }
 /*king*/
-.king{
-    box-shadow: 3px 3px 0 3px var(--s-king);
+.king .list{
+    background-color: var(--s-king);
+}
+.king .box{
     border: 1px solid var(--m-king);
 }
-.king .bgc{
+.king .bgc, .king .bottom::before{
     background-color: var(--m-king);
 }
 .king .side{
     color: var(--m-king);
 }
 .king .bottom{
-    background-color: var(--m-king);
     border-top: 1px solid var(--s-king);
 }
 /*matitan*/
-.matitan{
-    box-shadow: 3px 3px 0 3px var(--s-matitan);
+.matitan .list{
+    background-color: var(--s-matitan);
+}
+.matitan .box{
     border: 1px solid var(--m-matitan);
 }
-.matitan .bgc{
+.matitan .bgc, .matitan .bottom::before{
     background-color: var(--m-matitan);
 }
 .matitan .side{
     color: var(--m-matitan);
 }
 .matitan .bottom{
-    background-color: var(--m-matitan);
     border-top: 1px solid var(--s-matitan);
 }
 /*ikuno*/
-.ikuno{
-    box-shadow: 3px 3px 0 3px var(--s-ikuno);
+.ikuno .list{
+    background-color: var(--s-ikuno);
+}
+.ikuno .box{
     border: 1px solid var(--m-ikuno);
 }
-.ikuno .bgc{
+.ikuno .bgc, .ikuno .bottom::before{
     background-color: var(--m-ikuno);
 }
 .ikuno .side{
     color: var(--m-ikuno);
 }
 .ikuno .bottom{
-    background-color: var(--m-ikuno);
     border-top: 1px solid var(--s-ikuno);
 }
 /*palmer*/
-.palmer{
-    box-shadow: 3px 3px 0 3px var(--s-palmer);
+.palmer .list{
+    background-color: var(--s-palmer);
+}
+.palmer .box{
     border: 1px solid var(--m-palmer);
 }
-.palmer .bgc{
+.palmer .bgc, .palmer .bottom::before{
     background-color: var(--m-palmer);
 }
 .palmer .side{
     color: var(--m-palmer);
 }
 .palmer .bottom{
-    background-color: var(--m-palmer);
     border-top: 1px solid var(--s-palmer);
 }
 /*helios*/
-.helios{
-    box-shadow: 3px 3px 0 3px var(--s-helios);
+.helios .list{
+    background-color: var(--s-helios);
+}
+.helios .box{
     border: 1px solid var(--m-helios);
 }
-.helios .bgc{
+.helios .bgc, .helios .bottom::before{
     background-color: var(--m-helios);
 }
 .helios .side{
     color: var(--m-helios);
 }
 .helios .bottom{
-    background-color: var(--m-helios);
     border-top: 1px solid var(--s-helios);
 }
 /*turbo*/
-.turbo{
-    box-shadow: 3px 3px 0 3px var(--s-turbo);
+.turbo .list{
+    background-color: var(--s-turbo);
+}
+.turbo .box{
     border: 1px solid var(--m-turbo);
 }
-.turbo .bgc{
+.turbo .bgc, .turbo .bottom::before{
     background-color: var(--m-turbo);
 }
 .turbo .side{
     color: var(--m-turbo);
 }
 .turbo .bottom{
-    background-color: var(--m-turbo);
     border-top: 1px solid var(--s-turbo);
 }
 /*diamond*/
-.diamond{
-    box-shadow: 3px 3px 0 3px var(--s-diamond);
+.diamond .list{
+    background-color: var(--s-diamond);
+}
+.diamond .box{
     border: 1px solid var(--m-diamond);
 }
-.diamond .bgc{
+.diamond .bgc, .diamond .bottom::before{
     background-color: var(--m-diamond);
 }
 .diamond .side{
     color: var(--m-diamond);
 }
 .diamond .bottom{
-    background-color: var(--m-diamond);
     border-top: 1px solid var(--s-diamond);
 }
 /*kita*/
-.kita{
-    box-shadow: 3px 3px 0 3px var(--s-kita);
+.kita .list{
+    background-color: var(--s-kita);
+}
+.kita .box{
     border: 1px solid var(--m-kita);
 }
-.kita .bgc{
+.kita .bgc, .kita .bottom::before{
     background-color: var(--m-kita);
 }
 .kita .side{
     color: var(--m-kita);
 }
 .kita .bottom{
-    background-color: var(--m-kita);
     border-top: 1px solid var(--s-kita);
 }
 /*tiyo*/
-.tiyo{
-    box-shadow: 3px 3px 0 3px var(--s-tiyo);
+.tiyo .list{
+    background-color: var(--s-tiyo);
+}
+.tiyo .box{
     border: 1px solid var(--m-tiyo);
 }
-.tiyo .bgc{
+.tiyo .bgc, .tiyo .bottom::before{
     background-color: var(--m-tiyo);
 }
 .tiyo .side{
     color: var(--m-tiyo);
 }
 .tiyo .bottom{
-    background-color: var(--m-tiyo);
     border-top: 1px solid var(--s-tiyo);
 }
 /*sirius*/
-.sirius{
-    box-shadow: 3px 3px 0 3px var(--s-sirius);
+.sirius .list{
+    background-color: var(--s-sirius);
+}
+.sirius .box{
     border: 1px solid var(--m-sirius);
 }
-.sirius .bgc{
+.sirius .bgc, .sirius .bottom::before{
     background-color: var(--m-sirius);
 }
 .sirius .side{
     color: var(--m-sirius);
 }
 .sirius .bottom{
-    background-color: var(--m-sirius);
     border-top: 1px solid var(--s-sirius);
 }
 /*ardan*/
-.ardan{
-    box-shadow: 3px 3px 0 3px var(--s-ardan);
+.ardan .list{
+    background-color: var(--s-ardan);
+}
+.ardan .box{
     border: 1px solid var(--m-ardan);
 }
-.ardan .bgc{
+.ardan .bgc, .ardan .bottom::before{
     background-color: var(--m-ardan);
 }
 .ardan .side{
     color: var(--m-ardan);
 }
 .ardan .bottom{
-    background-color: var(--m-ardan);
     border-top: 1px solid var(--s-ardan);
 }
 /*yaeno*/
-.yaeno{
-    box-shadow: 3px 3px 0 3px var(--s-yaeno);
+.yaeno .list{
+    background-color: var(--s-yaeno);
+}
+.yaeno .box{
     border: 1px solid var(--m-yaeno);
 }
-.yaeno .bgc{
+.yaeno .bgc, .yaeno .bottom::before{
     background-color: var(--m-yaeno);
 }
 .yaeno .side{
     color: var(--m-yaeno);
 }
 .yaeno .bottom{
-    background-color: var(--m-yaeno);
     border-top: 1px solid var(--s-yaeno);
 }
 /*turu*/
-.turu{
-    box-shadow: 3px 3px 0 3px var(--s-turu);
+.turu .list{
+    background-color: var(--s-turu);
+}
+.turu .box{
     border: 1px solid var(--m-turu);
 }
-.turu .bgc{
+.turu .bgc, .turu .bottom::before{
     background-color: var(--m-turu);
 }
 .turu .side{
     color: var(--m-turu);
 }
 .turu .bottom{
-    background-color: var(--m-turu);
     border-top: 1px solid var(--s-turu);
 }
 /*bright*/
-.bright{
-    box-shadow: 3px 3px 0 3px var(--s-bright);
+.bright .list{
+    background-color: var(--s-bright);
+}
+.bright .box{
     border: 1px solid var(--m-bright);
 }
-.bright .bgc{
+.bright .bgc, .bright .bottom::before{
     background-color: var(--m-bright);
 }
 .bright .side{
     color: var(--m-bright);
 }
 .bright .bottom{
-    background-color: var(--m-bright);
     border-top: 1px solid var(--s-bright);
 }
 /*tact*/
-.tact{
-    box-shadow: 3px 3px 0 3px var(--s-tact);
+.tact .list{
+    background-color: var(--s-tact);
+}
+.tact .box{
     border: 1px solid var(--m-tact);
 }
-.tact .bgc{
+.tact .bgc, .tact .bottom::before{
     background-color: var(--m-tact);
 }
 .tact .side{
     color: var(--m-tact);
 }
 .tact .bottom{
-    background-color: var(--m-tact);
     border-top: 1px solid var(--s-tact);
 }
 /*laurel*/
-.laurel{
-    box-shadow: 3px 3px 0 3px var(--s-laurel);
+.laurel .list{
+    background-color: var(--s-laurel);
+}
+.laurel .box{
     border: 1px solid var(--m-laurel);
 }
-.laurel .bgc{
+.laurel .bgc, .laurel .bottom::before{
     background-color: var(--m-laurel);
 }
 .laurel .side{
     color: var(--m-laurel);
 }
 .laurel .bottom{
-    background-color: var(--m-laurel);
     border-top: 1px solid var(--s-laurel);
 }
 /*topro*/
-.topro{
-    box-shadow: 3px 3px 0 3px var(--s-topro);
+.topro .list{
+    background-color: var(--s-topro);
+}
+.topro .box{
     border: 1px solid var(--m-topro);
 }
-.topro .bgc{
+.topro .bgc, .topro .bottom::before{
     background-color: var(--m-topro);
 }
 .topro .side{
     color: var(--m-topro);
 }
 .topro .bottom{
-    background-color: var(--m-topro);
     border-top: 1px solid var(--s-topro);
 }
 /*zephyr*/
-.zephyr{
-    box-shadow: 3px 3px 0 3px var(--s-zephyr);
+.zephyr .list{
+    background-color: var(--s-zephyr);
+}
+.zephyr .box{
     border: 1px solid var(--m-zephyr);
 }
-.zephyr .bgc{
+.zephyr .bgc, .zephyr .bottom::before{
     background-color: var(--m-zephyr);
 }
 .zephyr .side{
     color: var(--m-zephyr);
 }
 .zephyr .bottom{
-    background-color: var(--m-zephyr);
     border-top: 1px solid var(--s-zephyr);
 }
 /*furi*/
-.furi{
-    box-shadow: 3px 3px 0 3px var(--s-furi);
+.furi .list{
+    background-color: var(--s-furi);
+}
+.furi .box{
     border: 1px solid var(--m-furi);
 }
-.furi .bgc{
+.furi .bgc, .furi .bottom::before{
     background-color: var(--m-furi);
 }
 .furi .side{
     color: var(--m-furi);
 }
 .furi .bottom{
-    background-color: var(--m-furi);
     border-top: 1px solid var(--s-furi);
 }
 /*tran*/
-.tran{
-    box-shadow: 3px 3px 0 3px var(--s-tran);
+.tran .list{
+    background-color: var(--s-tran);
+}
+.tran .box{
     border: 1px solid var(--m-tran);
 }
-.tran .bgc{
+.tran .bgc, .tran .bottom::before{
     background-color: var(--m-tran);
 }
 .tran .side{
     color: var(--m-tran);
 }
 .tran .bottom{
-    background-color: var(--m-tran);
     border-top: 1px solid var(--s-tran);
 }
 /*espoir*/
-.espoir{
-    box-shadow: 3px 3px 0 3px var(--s-espoir);
+.espoir .list{
+    background-color: var(--s-espoir);
+}
+.espoir .box{
     border: 1px solid var(--m-espoir);
 }
-.espoir .bgc{
+.espoir .bgc, .espoir .bottom::before{
     background-color: var(--m-espoir);
 }
 .espoir .side{
     color: var(--m-espoir);
 }
 .espoir .bottom{
-    background-color: var(--m-espoir);
     border-top: 1px solid var(--s-espoir);
 }
 /*flight*/
-.flight{
-    box-shadow: 3px 3px 0 3px var(--s-flight);
+.flight .list{
+    background-color: var(--s-flight);
+}
+.flight .box{
     border: 1px solid var(--m-flight);
 }
-.flight .bgc{
+.flight .bgc, .flight .bottom::before{
     background-color: var(--m-flight);
 }
 .flight .side{
     color: var(--m-flight);
 }
 .flight .bottom{
-    background-color: var(--m-flight);
     border-top: 1px solid var(--s-flight);
 }
 /*kris*/
-.kris{
-    box-shadow: 3px 3px 0 3px var(--s-kris);
+.kris .list{
+    background-color: var(--s-kris);
+}
+.kris .box{
     border: 1px solid var(--m-kris);
 }
-.kris .bgc{
+.kris .bgc, .kris .bottom::before{
     background-color: var(--m-kris);
 }
 .kris .side{
     color: var(--m-kris);
 }
 .kris .bottom{
-    background-color: var(--m-kris);
     border-top: 1px solid var(--s-kris);
 }
 /*gimlet*/
-.gimlet{
-    box-shadow: 3px 3px 0 3px var(--s-gimlet);
+.gimlet .list{
+    background-color: var(--s-gimlet);
+}
+.gimlet .box{
     border: 1px solid var(--m-gimlet);
 }
-.gimlet .bgc{
+.gimlet .bgc, .gimlet .bottom::before{
     background-color: var(--m-gimlet);
 }
 .gimlet .side{
     color: var(--m-gimlet);
 }
 .gimlet .bottom{
-    background-color: var(--m-gimlet);
     border-top: 1px solid var(--s-gimlet);
 }
 /*ruby*/
-.ruby{
-    box-shadow: 3px 3px 0 3px var(--s-ruby);
+.ruby .list{
+    background-color: var(--s-ruby);
+}
+.ruby .box{
     border: 1px solid var(--m-ruby);
 }
-.ruby .bgc{
+.ruby .bgc, .ruby .bottom::before{
     background-color: var(--m-ruby);
 }
 .ruby .side{
     color: var(--m-ruby);
 }
 .ruby .bottom{
-    background-color: var(--m-ruby);
     border-top: 1px solid var(--s-ruby);
 }
 /*ramonu*/
-.ramonu{
-    box-shadow: 3px 3px 0 3px var(--s-ramonu);
+.ramonu .list{
+    background-color: var(--s-ramonu);
+}
+.ramonu .box{
     border: 1px solid var(--m-ramonu);
 }
-.ramonu .bgc{
+.ramonu .bgc, .ramonu .bottom::before{
     background-color: var(--m-ramonu);
 }
 .ramonu .side{
     color: var(--m-ramonu);
 }
 .ramonu .bottom{
-    background-color: var(--m-ramonu);
     border-top: 1px solid var(--s-ramonu);
 }
 /*machan*/
-.machan{
-    box-shadow: 3px 3px 0 3px var(--s-machan);
+.machan .list{
+    background-color: var(--s-machan);
+}
+.machan .box{
     border: 1px solid var(--m-machan);
 }
-.machan .bgc{
+.machan .bgc, .machan .bottom::before{
     background-color: var(--m-machan);
 }
 .machan .side{
     color: var(--m-machan);
 }
 .machan .bottom{
-    background-color: var(--m-machan);
     border-top: 1px solid var(--s-machan);
 }
 /*crown*/
-.crown{
-    box-shadow: 3px 3px 0 3px var(--s-crown);
+.crown .list{
+    background-color: var(--s-crown);
+}
+.crown .box{
     border: 1px solid var(--m-crown);
 }
-.crown .bgc{
+.crown .bgc, .crown .bottom::before{
     background-color: var(--m-crown);
 }
 .crown .side{
     color: var(--m-crown);
 }
 .crown .bottom{
-    background-color: var(--m-crown);
     border-top: 1px solid var(--s-crown);
 }
 /*cheval*/
-.cheval{
-    box-shadow: 3px 3px 0 3px var(--s-cheval);
+.cheval .list{
+    background-color: var(--s-cheval);
+}
+.cheval .box{
     border: 1px solid var(--m-cheval);
 }
-.cheval .bgc{
+.cheval .bgc, .cheval .bottom::before{
     background-color: var(--m-cheval);
 }
 .cheval .side{
     color: var(--m-cheval);
 }
 .cheval .bottom{
-    background-color: var(--m-cheval);
     border-top: 1px solid var(--s-cheval);
 }
 /*verx*/
-.verx{
-    box-shadow: 3px 3px 0 3px var(--s-verx);
+.verx .list{
+    background-color: var(--s-verx);
+}
+.verx .box{
     border: 1px solid var(--m-verx);
 }
-.verx .bgc{
+.verx .bgc, .verx .bottom::before{
     background-color: var(--m-verx);
 }
 .verx .side{
     color: var(--m-verx);
 }
 .verx .bottom{
-    background-color: var(--m-verx);
     border-top: 1px solid var(--s-verx);
 }
 /*viv*/
-.viv{
-    box-shadow: 3px 3px 0 3px var(--s-viv);
+.viv .list{
+    background-color: var(--s-viv);
+}
+.viv .box{
     border: 1px solid var(--m-viv);
 }
-.viv .bgc{
+.viv .bgc, .viv .bottom::before{
     background-color: var(--m-viv);
 }
 .viv .side{
     color: var(--m-viv);
 }
 .viv .bottom{
-    background-color: var(--m-viv);
     border-top: 1px solid var(--s-viv);
 }
 /*dantu*/
-.dantu{
-    box-shadow: 3px 3px 0 3px var(--s-dantu);
+.dantu .list{
+    background-color: var(--s-dantu);
+}
+.dantu .box{
     border: 1px solid var(--m-dantu);
 }
-.dantu .bgc{
+.dantu .bgc, .dantu .bottom::before{
     background-color: var(--m-dantu);
 }
 .dantu .side{
     color: var(--m-dantu);
 }
 .dantu .bottom{
-    background-color: var(--m-dantu);
     border-top: 1px solid var(--s-dantu);
 }
 /*ks*/
-.ks{
-    box-shadow: 3px 3px 0 3px var(--s-ks);
+.ks .list{
+    background-color: var(--s-ks);
+}
+.ks .box{
     border: 1px solid var(--m-ks);
 }
-.ks .bgc{
+.ks .bgc, .ks .bottom::before{
     background-color: var(--m-ks);
 }
 .ks .side{
     color: var(--m-ks);
 }
 .ks .bottom{
-    background-color: var(--m-ks);
     border-top: 1px solid var(--s-ks);
 }
 /*pock*/
-.pock{
-    box-shadow: 3px 3px 0 3px var(--s-pock);
+.pock .list{
+    background-color: var(--s-pock);
+}
+.pock .box{
     border: 1px solid var(--m-pock);
 }
-.pock .bgc{
+.pock .bgc, .pock .bottom::before{
     background-color: var(--m-pock);
 }
 .pock .side{
     color: var(--m-pock);
 }
 .pock .bottom{
-    background-color: var(--m-pock);
     border-top: 1px solid var(--s-pock);
 }
 /*reason*/
-.reason{
-    box-shadow: 3px 3px 0 3px var(--s-reason);
+.reason .list{
+    background-color: var(--s-reason);
+}
+.reason .box{
     border: 1px solid var(--m-reason);
 }
-.reason .bgc{
+.reason .bgc, .reason .bottom::before{
     background-color: var(--m-reason);
 }
 .reason .side{
     color: var(--m-reason);
 }
 .reason .bottom{
-    background-color: var(--m-reason);
     border-top: 1px solid var(--s-reason);
 }
 /*still*/
-.still{
-    box-shadow: 3px 3px 0 3px var(--s-still);
+.still .list{
+    background-color: var(--s-still);
+}
+.still .box{
     border: 1px solid var(--m-still);
 }
-.still .bgc{
+.still .bgc, .still .bottom::before{
     background-color: var(--m-still);
 }
 .still .side{
     color: var(--m-still);
 }
 .still .bottom{
-    background-color: var(--m-still);
     border-top: 1px solid var(--s-still);
 }
 /*ricky*/
-.ricky{
-    box-shadow: 3px 3px 0 3px var(--s-ricky);
+.ricky .list{
+    background-color: var(--s-ricky);
+}
+.ricky .box{
     border: 1px solid var(--m-ricky);
 }
-.ricky .bgc{
+.ricky .bgc, .ricky .bottom::before{
     background-color: var(--m-ricky);
 }
 .ricky .side{
     color: var(--m-ricky);
 }
 .ricky .bottom{
-    background-color: var(--m-ricky);
     border-top: 1px solid var(--s-ricky);
 }
 /*tarumae*/
-.tarumae{
-    box-shadow: 3px 3px 0 3px var(--s-tarumae);
+.tarumae .list{
+    background-color: var(--s-tarumae);
+}
+.tarumae .box{
     border: 1px solid var(--m-tarumae);
 }
-.tarumae .bgc{
+.tarumae .bgc, .tarumae .bottom::before{
     background-color: var(--m-tarumae);
 }
 .tarumae .side{
     color: var(--m-tarumae);
 }
 .tarumae .bottom{
-    background-color: var(--m-tarumae);
     border-top: 1px solid var(--s-tarumae);
 }
 /*acute*/
-.acute{
-    box-shadow: 3px 3px 0 3px var(--s-acute);
+.acute .list{
+    background-color: var(--s-acute);
+}
+.acute .box{
     border: 1px solid var(--m-acute);
 }
-.acute .bgc{
+.acute .bgc, .acute .bottom::before{
     background-color: var(--m-acute);
 }
 .acute .side{
     color: var(--m-acute);
 }
 .acute .bottom{
-    background-color: var(--m-acute);
     border-top: 1px solid var(--s-acute);
 }
 /*big*/
-.big{
-    box-shadow: 3px 3px 0 3px var(--s-big);
+.big .list{
+    background-color: var(--s-big);
+}
+.big .box{
     border: 1px solid var(--m-big);
 }
-.big .bgc{
+.big .bgc, .big .bottom::before{
     background-color: var(--m-big);
 }
 .big .side{
     color: var(--m-big);
 }
 .big .bottom{
-    background-color: var(--m-big);
     border-top: 1px solid var(--s-big);
 }
 /*earth*/
-.earth{
-    box-shadow: 3px 3px 0 3px var(--s-earth);
+.earth .list{
+    background-color: var(--s-earth);
+}
+.earth .box{
     border: 1px solid var(--m-earth);
 }
-.earth .bgc{
+.earth .bgc, .earth .bottom::before{
     background-color: var(--m-earth);
 }
 .earth .side{
     color: var(--m-earth);
 }
 .earth .bottom{
-    background-color: var(--m-earth);
     border-top: 1px solid var(--s-earth);
 }
 /*royce*/
-.royce{
-    box-shadow: 3px 3px 0 3px var(--s-royce);
+.royce .list{
+    background-color: var(--s-royce);
+}
+.royce .box{
     border: 1px solid var(--m-royce);
 }
-.royce .bgc{
+.royce .bgc, .royce .bottom::before{
     background-color: var(--m-royce);
 }
 .royce .side{
     color: var(--m-royce);
 }
 .royce .bottom{
-    background-color: var(--m-royce);
     border-top: 1px solid var(--s-royce);
 }
 /*ace*/
-.ace{
-    box-shadow: 3px 3px 0 3px var(--s-ace);
+.ace .list{
+    background-color: var(--s-ace);
+}
+.ace .box{
     border: 1px solid var(--m-ace);
 }
-.ace .bgc{
+.ace .bgc, .ace .bottom::before{
     background-color: var(--m-ace);
 }
 .ace .side{
     color: var(--m-ace);
 }
 .ace .bottom{
-    background-color: var(--m-ace);
     border-top: 1px solid var(--s-ace);
 }
 /*neo*/
-.neo{
-    box-shadow: 3px 3px 0 3px var(--s-neo);
+.neo .list{
+    background-color: var(--s-neo);
+}
+.neo .box{
     border: 1px solid var(--m-neo);
 }
-.neo .bgc{
+.neo .bgc, .neo .bottom::before{
     background-color: var(--m-neo);
 }
 .neo .side{
     color: var(--m-neo);
 }
 .neo .bottom{
-    background-color: var(--m-neo);
     border-top: 1px solid var(--s-neo);
 }
 /*miracle*/
-.miracle{
-    box-shadow: 3px 3px 0 3px var(--s-miracle);
+.miracle .list{
+    background-color: var(--s-miracle);
+}
+.miracle .box{
     border: 1px solid var(--m-miracle);
 }
-.miracle .bgc{
+.miracle .bgc, .miracle .bottom::before{
     background-color: var(--m-miracle);
 }
 .miracle .side{
     color: var(--m-miracle);
 }
 .miracle .bottom{
-    background-color: var(--m-miracle);
     border-top: 1px solid var(--s-miracle);
 }
 /*tap*/
-.tap{
-    box-shadow: 3px 3px 0 3px var(--s-tap);
+.tap .list{
+    background-color: var(--s-tap);
+}
+.tap .box{
     border: 1px solid var(--m-tap);
 }
-.tap .bgc{
+.tap .bgc, .tap .bottom::before{
     background-color: var(--m-tap);
 }
 .tap .side{
     color: var(--m-tap);
 }
 .tap .bottom{
-    background-color: var(--m-tap);
     border-top: 1px solid var(--s-tap);
 }
 /*dura*/
-.dura{
-    box-shadow: 3px 3px 0 3px var(--s-dura);
+.dura .list{
+    background-color: var(--s-dura);
+}
+.dura .box{
     border: 1px solid var(--m-dura);
 }
-.dura .bgc{
+.dura .bgc, .dura .bottom::before{
     background-color: var(--m-dura);
 }
 .dura .side{
     color: var(--m-dura);
 }
 .dura .bottom{
-    background-color: var(--m-dura);
     border-top: 1px solid var(--s-dura);
 }
 /*kraft*/
-.kraft{
-    box-shadow: 3px 3px 0 3px var(--s-kraft);
+.kraft .list{
+    background-color: var(--s-kraft);
+}
+.kraft .box{
     border: 1px solid var(--m-kraft);
 }
-.kraft .bgc{
+.kraft .bgc, .kraft .bottom::before{
     background-color: var(--m-kraft);
 }
 .kraft .side{
     color: var(--m-kraft);
 }
 .kraft .bottom{
-    background-color: var(--m-kraft);
     border-top: 1px solid var(--s-kraft);
 }
 /*cesario*/
-.cesario{
-    box-shadow: 3px 3px 0 3px var(--s-cesario);
+.cesario .list{
+    background-color: var(--s-cesario);
+}
+.cesario .box{
     border: 1px solid var(--m-cesario);
 }
-.cesario .bgc{
+.cesario .bgc, .cesario .bottom::before{
     background-color: var(--m-cesario);
 }
 .cesario .side{
     color: var(--m-cesario);
 }
 .cesario .bottom{
-    background-color: var(--m-cesario);
     border-top: 1px solid var(--s-cesario);
 }
 /*messiah*/
-.messiah{
-    box-shadow: 3px 3px 0 3px var(--s-messiah);
+.messiah .list{
+    background-color: var(--s-messiah);
+}
+.messiah .box{
     border: 1px solid var(--m-messiah);
 }
-.messiah .bgc{
+.messiah .bgc, .messiah .bottom::before{
     background-color: var(--m-messiah);
 }
 .messiah .side{
     color: var(--m-messiah);
 }
 .messiah .bottom{
-    background-color: var(--m-messiah);
     border-top: 1px solid var(--s-messiah);
 }
 /*heart*/
-.heart{
-    box-shadow: 3px 3px 0 3px var(--s-heart);
+.heart .list{
+    background-color: var(--s-heart);
+}
+.heart .box{
     border: 1px solid var(--m-heart);
 }
-.heart .bgc{
+.heart .bgc, .heart .bottom::before{
     background-color: var(--m-heart);
 }
 .heart .side{
     color: var(--m-heart);
 }
 .heart .bottom{
-    background-color: var(--m-heart);
     border-top: 1px solid var(--s-heart);
 }
 /*orfe*/
-.orfe{
-    box-shadow: 3px 3px 0 3px var(--s-orfe);
+.orfe .list{
+    background-color: var(--s-orfe);
+}
+.orfe .box{
     border: 1px solid var(--m-orfe);
 }
-.orfe .bgc{
+.orfe .bgc, .orfe .bottom::before{
     background-color: var(--m-orfe);
 }
 .orfe .side{
     color: var(--m-orfe);
 }
 .orfe .bottom{
-    background-color: var(--m-orfe);
     border-top: 1px solid var(--s-orfe);
 }
 /*donna*/
-.donna{
-    box-shadow: 3px 3px 0 3px var(--s-donna);
+.donna .list{
+    background-color: var(--s-donna);
+}
+.donna .box{
     border: 1px solid var(--m-donna);
 }
-.donna .bgc{
+.donna .bgc, .donna .bottom::before{
     background-color: var(--m-donna);
 }
 .donna .side{
     color: var(--m-donna);
 }
 .donna .bottom{
-    background-color: var(--m-donna);
     border-top: 1px solid var(--s-donna);
 }
 /*vari*/
-.vari{
-    box-shadow: 3px 3px 0 3px var(--s-vari);
+.vari .list{
+    background-color: var(--s-vari);
+}
+.vari .box{
     border: 1px solid var(--m-vari);
 }
-.vari .bgc{
+.vari .bgc, .vari .bottom::before{
     background-color: var(--m-vari);
 }
 .vari .side{
     color: var(--m-vari);
 }
 .vari .bottom{
-    background-color: var(--m-vari);
     border-top: 1px solid var(--s-vari);
 }
 /*dream*/
-.dream{
-    box-shadow: 3px 3px 0 3px var(--s-dream);
+.dream .list{
+    background-color: var(--s-dream);
+}
+.dream .box{
     border: 1px solid var(--m-dream);
 }
-.dream .bgc{
+.dream .bgc, .dream .bottom::before{
     background-color: var(--m-dream);
 }
 .dream .side{
     color: var(--m-dream);
 }
 .dream .bottom{
-    background-color: var(--m-dream);
     border-top: 1px solid var(--s-dream);
 }
 /*vista*/
-.vista{
-    box-shadow: 3px 3px 0 3px var(--s-vista);
+.vista .list{
+    background-color: var(--s-vista);
+}
+.vista .box{
     border: 1px solid var(--m-vista);
 }
-.vista .bgc{
+.vista .bgc, .vista .bottom::before{
     background-color: var(--m-vista);
 }
 .vista .side{
     color: var(--m-vista);
 }
 .vista .bottom{
-    background-color: var(--m-vista);
     border-top: 1px solid var(--s-vista);
 }
 /*believe*/
-.believe{
-    box-shadow: 3px 3px 0 3px var(--s-believe);
+.believe .list{
+    background-color: var(--s-believe);
+}
+.believe .box{
     border: 1px solid var(--m-believe);
 }
-.believe .bgc{
+.believe .bgc, .believe .bottom::before{
     background-color: var(--m-believe);
 }
 .believe .side{
     color: var(--m-believe);
 }
 .believe .bottom{
-    background-color: var(--m-believe);
     border-top: 1px solid var(--s-believe);
 }
 /*light*/
-.light{
-    box-shadow: 3px 3px 0 3px var(--s-light);
+.light .list{
+    background-color: var(--s-light);
+}
+.light .box{
     border: 1px solid var(--m-light);
 }
-.light .bgc{
+.light .bgc, .light .bottom::before{
     background-color: var(--m-light);
 }
 .light .side{
     color: var(--m-light);
 }
 .light .bottom{
-    background-color: var(--m-light);
     border-top: 1px solid var(--s-light);
 }
 /*duran*/
-.duran{
-    box-shadow: 3px 3px 0 3px var(--s-duran);
+.duran .list{
+    background-color: var(--s-duran);
+}
+.duran .box{
     border: 1px solid var(--m-duran);
 }
-.duran .bgc{
+.duran .bgc, .duran .bottom::before{
     background-color: var(--m-duran);
 }
 .duran .side{
     color: var(--m-duran);
 }
 .duran .bottom{
-    background-color: var(--m-duran);
     border-top: 1px solid var(--s-duran);
 }
 /*bubble*/
-.bubble{
-    box-shadow: 3px 3px 0 3px var(--s-bubble);
+.bubble .list{
+    background-color: var(--s-bubble);
+}
+.bubble .box{
     border: 1px solid var(--m-bubble);
 }
-.bubble .bgc{
+.bubble .bgc, .bubble .bottom::before{
     background-color: var(--m-bubble);
 }
 .bubble .side{
     color: var(--m-bubble);
 }
 .bubble .bottom{
-    background-color: var(--m-bubble);
     border-top: 1px solid var(--s-bubble);
 }
 
-@media screen and (max-width:768px) {
-    .box{
-        width: calc((100% - 15px*6)/3);
+/*レスポンシブ*/
+@media screen and (max-width:768px) 
+/*タブレット*/{
+    .chara{
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 -1.8666666667vw;
     }
-    .box:nth-child(7n+1){margin-left: 15px;}
-    .box:nth-child(7n){margin-right: 15px;}
-    .box:nth-child(3n+1){margin-left: 10px;}
-    .box:nth-child(3n){margin-right: 10px;}
-    .bgc{height: 190px;}
+    .list{
+        height: 44vw;
+        margin: 0 1.8666666667vw 4vw;
+        width: 27.3333333333vw;
+    }
+    .box{
+        height: 42.9333333333vw;
+        width: 26.2666666667vw;
+    }
+    .top{
+        height: 34.4vw;
+    }
+    .bgc{
+        height: 30vw;
+        width: 21.7333333333vw;
+    }
+    .bg .side{
+        font-size: 2.8vw;
+        margin-top: 1.0666666667vw;
+    }
+    .bottom{
+        padding-left: 2vw;
+    }
+    .bottom::before{
+        width: .9333333333vw;
+    }
+    .name{
+        font-size: 2.6666666667vw;
+    }
+    .cv{
+        font-size: 2.4vw;
+        margin-top: .9333333333vw;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -2130,9 +2331,5 @@ form, input, div {
     }
     .box:nth-child(3n+1), .box:nth-child(7n+1){margin-left: 5px;}
     .box:nth-child(3n), .box:nth-child(7n){margin-right: 5px;}
-    .name{
-      font-size: 10px;
-      font-weight: bold;
-    }
-    .bgc{height: 140px;}
+    .bgc{height: 35vw;}
 }
