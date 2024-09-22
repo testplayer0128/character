@@ -2125,13 +2125,11 @@ form, input, div {
 @media screen and (max-width:480px) {
     .chara{width: 100%;}
     .box{
-        width: calc((100% - 10px*6)/3);
-        margin: 5px 10px;
+        width: calc((100% - 5px*6)/3);
+        margin: 5px;
     }
-    .box:nth-child(7n+1){margin-left: 10px;}
-    .box:nth-child(7n){margin-right: 10px;}
-    .box:nth-child(3n+1){margin-left: 5px;}
-    .box:nth-child(3n){margin-right: 5px;}
+    .box:nth-child(3n+1), .box:nth-child(7n+1){margin-left: 5px;}
+    .box:nth-child(3n), .box:nth-child(7n){margin-right: 5px;}
     .name{font-size: 11.5px;}
     .bgc{height: 140px;}
 }
