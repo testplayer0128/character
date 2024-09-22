@@ -2130,6 +2130,9 @@ form, input, div {
     }
     .box:nth-child(3n+1), .box:nth-child(7n+1){margin-left: 5px;}
     .box:nth-child(3n), .box:nth-child(7n){margin-right: 5px;}
-    .name{font-size: 11.5px;}
+    .name{
+      font-size: 10px;
+      font-weight: bold;
+    }
     .bgc{height: 140px;}
 }
