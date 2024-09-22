@@ -252,6 +252,7 @@ form, input, div {
     --s-bubble:#0047bb;
 
 }
+*{box-sizing: border-box;}
 
 .chara{
     display: flex;
@@ -2114,19 +2115,23 @@ form, input, div {
     .box{
         width: calc((100% - 15px*6)/3);
     }
-    .box:nth-child(7n+1){
-        margin-left: 15px;
+    .box:nth-child(7n+1){margin-left: 15px;}
+    .box:nth-child(7n){margin-right: 15px;}
+    .box:nth-child(3n+1){margin-left: 10px;}
+    .box:nth-child(3n){margin-right: 10px;}
+    .bgc{height: 190px;}
+}
+
+@media screen and (max-width:480px) {
+    .chara{width: 100%;}
+    .box{
+        width: calc((100% - 10px*6)/3);
+        margin: 5px 10px;
     }
-    .box:nth-child(7n){
-        margin-right: 15px;
-    }
-    .box:nth-child(3n+1){
-        margin-left: 10px;
-    }
-    .box:nth-child(3n){
-        margin-right: 10px;
-    }
-    .bgc{
-        height: 190px;
-    }
+    .box:nth-child(7n+1){margin-left: 10px;}
+    .box:nth-child(7n){margin-right: 10px;}
+    .box:nth-child(3n+1){margin-left: 5px;}
+    .box:nth-child(3n){margin-right: 5px;}
+    .name{font-size: 12.5px;}
+    .bgc{height: 145px;}
 }
