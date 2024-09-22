@@ -4,9 +4,9 @@ h1, h2, h3, h4, h5, h6, p,
 form, input, div {
   margin: 0;
   padding: 0;
-  font-family:"Dancing Script",Serif;
-  font-style: italic;
-  font-weight: normal;
+  font-family: YakuHanJP,Roboto,"Zen Kaku Gothic New",sans-serif;
+  font-weight: 500;
+  line-height: 1;
 }
 
 :root{
@@ -254,6 +254,7 @@ form, input, div {
 }
 *{box-sizing: border-box;}
 
+body{background-color: lavender;}
 main{
     width: 83.3333333333vw;
     margin: 0 auto;
@@ -263,7 +264,7 @@ main{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 -.7291666667vw;
+    margin: 1.8229166667vw -.7291666667vw 0;
     position: relative;
 }
 .list
@@ -320,6 +321,8 @@ main{
     display: flex;
     text-align: center;
     font-weight: 700;
+    font-family:"Dancing Script",Serif;
+    font-style: italic;
 }
 .bottom
 /*下部分*/{
@@ -329,7 +332,7 @@ main{
     height: 100%;
     padding-left: .78125vw;
     margin-left: 0;
-    font-style: normal;
+    justify-content: center;
 }
 .bottom::before
 /*スペース*/{
@@ -346,18 +349,20 @@ main{
     align-content: center;
     font-size: 1.0416666667vw;
     font-weight: 700;
+    letter-spacing: -.05em;
 }
 .cv
 /*CV*/{
     font-size: .8854166667vw;
     color: #505050;
     margin-top: .204166667vw;
-    font-family: "Kiwi Maru", serif;
     height: 1em;
+    font-family: "kiwi maru";
 }
 .cv span{
     margin-left: .1em;
     margin-right: .1em;
+    letter-spacing: .05em;
 }
 
 /*special*/
@@ -2284,6 +2289,10 @@ main{
 /*レスポンシブ*/
 @media screen and (max-width:768px) 
 /*タブレット*/{
+    main{
+        width: initial;
+        margin: 4vw 5.3333333333vw 0;
+    }
     .chara{
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0 -1.8666666667vw;
@@ -2323,7 +2332,7 @@ main{
     }
 }
 
-@media screen and (max-width:480px) {
+/*@media screen and (max-width:480px) {
     .chara{width: 100%;}
     .box{
         width: calc((100% - 5px*6)/3);
@@ -2332,4 +2341,4 @@ main{
     .box:nth-child(3n+1), .box:nth-child(7n+1){margin-left: 5px;}
     .box:nth-child(3n), .box:nth-child(7n){margin-right: 5px;}
     .bgc{height: 35vw;}
-}
+}*/
