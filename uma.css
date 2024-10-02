@@ -250,6 +250,8 @@ form, input, div {
     --s-duran:#d22630;
     --m-bubble:#e5bd00;
     --s-bubble:#0047bb;
+    --m-pandora:#fd637f;
+    --s-pandora:#fbd872;
 
 }
 *{box-sizing: border-box;}
@@ -2283,6 +2285,22 @@ main{
     color: var(--m-bubble);
 }
 .bubble .bottom{
+    border-top: 1px solid var(--s-bubble);
+}
+/*pandora*/
+.pandora .list{
+    background-color: var(--s-pandora);
+}
+.pandora .box{
+    border: 1px solid var(--m-pandora);
+}
+.pandora .bgc, .pandora .bottom::before{
+    background-color: var(--m-pandora);
+}
+.pandora .side{
+    color: var(--m-pandora);
+}
+.pandora .bottom{
     border-top: 1px solid var(--s-bubble);
 }
 
