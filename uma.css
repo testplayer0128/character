@@ -261,6 +261,8 @@ main{
     width: 83.3333333333vw;
     margin: 0 auto;
 }
+input[type="checkbox"], .m-cv{display: none;}
+.checkbox:checked + .m-cv{display: inline-block;}
 .chara
 /*外枠*/{
     display: grid;
@@ -361,7 +363,7 @@ main{
     height: 1em;
     font-family: "kiwi maru";
 }
-.cv span{
+.s-cv{
     margin-left: .1em;
     margin-right: .1em;
     letter-spacing: .05em;
