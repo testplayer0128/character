@@ -252,7 +252,10 @@ form, input, div {
     --s-bubble:#0047bb;
     --m-pandora:#fd637f;
     --s-pandora:#fbd872;
-
+    --m-chitose:#FA83CB;
+    --s-chitose:#D8C8D1;
+    --m-blast:#009CBD;
+    --s-blast:#0CB85F;
 }
 *{box-sizing: border-box;}
 
@@ -2305,6 +2308,54 @@ input[type="checkbox"], .m-cv{display: none;}
 .pandora .bottom{
     border-top: 1px solid var(--s-bubble);
 }
+/*chitose*/
+.chitose .list{
+    background-color: var(--s-chitose);
+}
+.chitose .box{
+    border: 1px solid var(--m-chitose);
+}
+.chitose .bgc, .chitose .bottom::before{
+    background-color: var(--m-chitose);
+}
+.chitose .side{
+    color: var(--m-chitose);
+}
+.chitose .bottom{
+    border-top: 1px solid var(--s-chitose);
+}
+/*blast*/
+.blast .list{
+    background-color: var(--s-blast);
+}
+.blast .box{
+    border: 1px solid var(--m-blast);
+}
+.blast .bgc, .blast .bottom::before{
+    background-color: var(--m-blast);
+}
+.blast .side{
+    color: var(--m-blast);
+}
+.blast .bottom{
+    border-top: 1px solid var(--s-blast);
+}
+/*no*
+.no .list{
+    background-color: var(--s-no);
+}
+.no .box{
+    border: 1px solid var(--m-no);
+}
+.no .bgc, .no .bottom::before{
+    background-color: var(--m-no);
+}
+.no .side{
+    color: var(--m-no);
+}
+.no .bottom{
+    border-top: 1px solid var(--s-no);
+}*/
 
 /*レスポンシブ*/
 @media screen and (max-width:768px) 
