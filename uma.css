@@ -256,7 +256,24 @@ form, input, div {
     --s-chitose:#D8C8D1;
     --m-blast:#009CBD;
     --s-blast:#0CB85F;
+    --m-meno:#574a74;
+    --s-meno:#f4db4e;
+    --m-eye:#69a9e9;
+    --s-eye:#cc3300;
+    --m-lilac:#454152;
+    --s-lilac:#907594;
+    --m-gran:#53565a;
+    --s-gran:#ef4d60;
+    --m-loves:#424840;
+    --s-loves:#268745;
+    --m-chrono:#464647;
+    --s-chrono:#50a19f;
+    --m-bouqe:#8e8180;
+    --s-bouqe:#473d3c;
 }
+/*  --m-df:;
+    --s-df:;
+*/
 *{box-sizing: border-box;}
 
 body{background-color: lavender;}
@@ -2340,21 +2357,133 @@ input[type="checkbox"], .m-cv{display: none;}
 .blast .bottom{
     border-top: 1px solid var(--s-blast);
 }
-/*no*
-.no .list{
-    background-color: var(--s-no);
+/*meno*/
+.meno .list{
+    background-color: var(--s-meno);
 }
-.no .box{
-    border: 1px solid var(--m-no);
+.meno .box{
+    border: 1px solid var(--m-meno);
 }
-.no .bgc, .no .bottom::before{
-    background-color: var(--m-no);
+.meno .bgc, .meno .bottom::before{
+    background-color: var(--m-meno);
 }
-.no .side{
-    color: var(--m-no);
+.meno .side{
+    color: var(--m-meno);
 }
-.no .bottom{
-    border-top: 1px solid var(--s-no);
+.meno .bottom{
+    border-top: 1px solid var(--s-meno);
+}
+/*eye*/
+.eye .list{
+    background-color: var(--s-eye);
+}
+.eye .box{
+    border: 1px solid var(--m-eye);
+}
+.eye .bgc, .eye .bottom::before{
+    background-color: var(--m-eye);
+}
+.eye .side{
+    color: var(--m-eye);
+}
+.eye .bottom{
+    border-top: 1px solid var(--s-eye);
+}
+/*lilac*/
+.lilac .list{
+    background-color: var(--s-lilac);
+}
+.lilac .box{
+    border: 1px solid var(--m-lilac);
+}
+.lilac .bgc, .lilac .bottom::before{
+    background-color: var(--m-lilac);
+}
+.lilac .side{
+    color: var(--m-lilac);
+}
+.lilac .bottom{
+    border-top: 1px solid var(--s-lilac);
+}
+/*gran*/
+.gran .list{
+    background-color: var(--s-gran);
+}
+.gran .box{
+    border: 1px solid var(--m-gran);
+}
+.gran .bgc, .gran .bottom::before{
+    background-color: var(--m-gran);
+}
+.gran .side{
+    color: var(--m-gran);
+}
+.gran .bottom{
+    border-top: 1px solid var(--s-gran);
+}
+/*loves*/
+.loves .list{
+    background-color: var(--s-loves);
+}
+.loves .box{
+    border: 1px solid var(--m-loves);
+}
+.loves .bgc, .loves .bottom::before{
+    background-color: var(--m-loves);
+}
+.loves .side{
+    color: var(--m-loves);
+}
+.loves .bottom{
+    border-top: 1px solid var(--s-loves);
+}
+/*chrono*/
+.chrono .list{
+    background-color: var(--s-chrono);
+}
+.chrono .box{
+    border: 1px solid var(--m-chrono);
+}
+.chrono .bgc, .chrono .bottom::before{
+    background-color: var(--m-chrono);
+}
+.chrono .side{
+    color: var(--m-chrono);
+}
+.chrono .bottom{
+    border-top: 1px solid var(--s-chrono);
+}
+/*bouqe*/
+.bouqe .list{
+    background-color: var(--s-bouqe);
+}
+.bouqe .box{
+    border: 1px solid var(--m-bouqe);
+}
+.bouqe .bgc, .bouqe .bottom::before{
+    background-color: var(--m-bouqe);
+}
+.bouqe .side{
+    color: var(--m-bouqe);
+}
+.bouqe .bottom{
+    border-top: 1px solid var(--s-bouqe);
+}
+/*df*
+.df .list{
+    background-color: var(--s-df);
+}
+.df .box{
+    border: 1px solid var(--m-df);
+}
+.df .bgc, .df .bottom::before{
+    background-color: var(--m-df);
+}
+.df .side{
+    color: var(--m-df);
+}
+.df .bottom{
+    border-top: 1px solid var(--s-df);
 }*/
 
 /*レスポンシブ*/
