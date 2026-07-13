@@ -270,6 +270,30 @@ form, input, div {
     --s-chrono:#50a19f;
     --m-bouqe:#8e8180;
     --s-bouqe:#473d3c;
+    --m-stay:#bfb33e;
+    --s-stay:#49699c;
+    --m-red:#cb3a43;
+    --s-red:#802f2d;
+    --m-kiseki:#2c9c46;
+    --s-kiseki:#c8dbe9;
+    --m-young:#822b4a;
+    --s-young:#d8ced2;
+    --m-marche:#8b1538;
+    --s-marche:#e9a2b2;
+    --m-epi:#17af87;
+    --s-epi:#d0dee8;
+    --m-logo:#7e2d40;
+    --s-logo:#bd9b60;
+    --m-pisa:#4146b8;
+    --s-pisa:#f1eb9d;
+    --m-rose:#cb363d;
+    --s-rose:#52606b;
+    --m-ruler:#beab08;
+    --s-ruler:#3a4c5c;
+    --m-title:#4ea547;
+    --s-title:#ebe367;
+    --m-aroove:#344d99;
+    --s-aroove:#5cbac8;
 }
 /*  --m-df:;
     --s-df:;
@@ -2469,6 +2493,210 @@ input[type="checkbox"], .m-cv{display: none;}
 .bouqe .bottom{
     border-top: 1px solid var(--s-bouqe);
 }
+/*stay*/
+.stay .list{
+    background-color: var(--s-stay);
+}
+.stay .box{
+    border: 1px solid var(--m-stay);
+}
+.stay .bgc, .stay .bottom::before{
+    background-color: var(--m-stay);
+}
+.stay .side{
+    color: var(--m-stay);
+}
+.stay .bottom{
+    border-top: 1px solid var(--s-stay);
+}
+
+/*red*/
+.red .list{
+    background-color: var(--s-red);
+}
+.red .box{
+    border: 1px solid var(--m-red);
+}
+.red .bgc, .red .bottom::before{
+    background-color: var(--m-red);
+}
+.red .side{
+    color: var(--m-red);
+}
+.red .bottom{
+    border-top: 1px solid var(--s-red);
+}
+
+/*kiseki*/
+.kiseki .list{
+    background-color: var(--s-kiseki);
+}
+.kiseki .box{
+    border: 1px solid var(--m-kiseki);
+}
+.kiseki .bgc, .kiseki .bottom::before{
+    background-color: var(--m-kiseki);
+}
+.kiseki .side{
+    color: var(--m-kiseki);
+}
+.kiseki .bottom{
+    border-top: 1px solid var(--s-kiseki);
+}
+
+/*young*/
+.young .list{
+    background-color: var(--s-young);
+}
+.young .box{
+    border: 1px solid var(--m-young);
+}
+.young .bgc, .young .bottom::before{
+    background-color: var(--m-young);
+}
+.young .side{
+    color: var(--m-young);
+}
+.young .bottom{
+    border-top: 1px solid var(--s-young);
+}
+
+/*marche*/
+.marche .list{
+    background-color: var(--s-marche);
+}
+.marche .box{
+    border: 1px solid var(--m-marche);
+}
+.marche .bgc, .marche .bottom::before{
+    background-color: var(--m-marche);
+}
+.marche .side{
+    color: var(--m-marche);
+}
+.marche .bottom{
+    border-top: 1px solid var(--s-marche);
+}
+
+/*epi*/
+.epi .list{
+    background-color: var(--s-epi);
+}
+.epi .box{
+    border: 1px solid var(--m-epi);
+}
+.epi .bgc, .epi .bottom::before{
+    background-color: var(--m-epi);
+}
+.epi .side{
+    color: var(--m-epi);
+}
+.epi .bottom{
+    border-top: 1px solid var(--s-epi);
+}
+
+/*logo*/
+.logo .list{
+    background-color: var(--s-logo);
+}
+.logo .box{
+    border: 1px solid var(--m-logo);
+}
+.logo .bgc, .logo .bottom::before{
+    background-color: var(--m-logo);
+}
+.logo .side{
+    color: var(--m-logo);
+}
+.logo .bottom{
+    border-top: 1px solid var(--s-logo);
+}
+
+/*pisa*/
+.pisa .list{
+    background-color: var(--s-pisa);
+}
+.pisa .box{
+    border: 1px solid var(--m-pisa);
+}
+.pisa .bgc, .pisa .bottom::before{
+    background-color: var(--m-pisa);
+}
+.pisa .side{
+    color: var(--m-pisa);
+}
+.pisa .bottom{
+    border-top: 1px solid var(--s-pisa);
+}
+
+/*rose*/
+.rose .list{
+    background-color: var(--s-rose);
+}
+.rose .box{
+    border: 1px solid var(--m-rose);
+}
+.rose .bgc, .rose .bottom::before{
+    background-color: var(--m-rose);
+}
+.rose .side{
+    color: var(--m-rose);
+}
+.rose .bottom{
+    border-top: 1px solid var(--s-rose);
+}
+
+/*ruler*/
+.ruler .list{
+    background-color: var(--s-ruler);
+}
+.ruler .box{
+    border: 1px solid var(--m-ruler);
+}
+.ruler .bgc, .ruler .bottom::before{
+    background-color: var(--m-ruler);
+}
+.ruler .side{
+    color: var(--m-ruler);
+}
+.ruler .bottom{
+    border-top: 1px solid var(--s-ruler);
+}
+
+/*title*/
+.title .list{
+    background-color: var(--s-title);
+}
+.title .box{
+    border: 1px solid var(--m-title);
+}
+.title .bgc, .title .bottom::before{
+    background-color: var(--m-title);
+}
+.title .side{
+    color: var(--m-title);
+}
+.title .bottom{
+    border-top: 1px solid var(--s-title);
+}
+
+/*aroove*/
+.aroove .list{
+    background-color: var(--s-aroove);
+}
+.aroove .box{
+    border: 1px solid var(--m-aroove);
+}
+.aroove .bgc, .aroove .bottom::before{
+    background-color: var(--m-aroove);
+}
+.aroove .side{
+    color: var(--m-aroove);
+}
+.aroove .bottom{
+    border-top: 1px solid var(--s-aroove);
+}
+
 /*df*
 .df .list{
     background-color: var(--s-df);
